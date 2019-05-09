@@ -1,0 +1,16 @@
+{
+    "name": "tmckenzie/phpunittestgenerator",
+    "authors": [
+        {
+            "name": "tylermckenzie",
+            "email": "tylrmckenz@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Phptestgen\\": "src/",
+            "PHPSimpleCodeGenerator\\": "PHPSimpleCodeGenerator/"
+        }
+    }
+}
