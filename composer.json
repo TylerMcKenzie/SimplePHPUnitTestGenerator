@@ -6,11 +6,19 @@
             "email": "tylrmckenz@gmail.com"
         }
     ],
-    "require": {},
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/TylerMcKenzie/PHPSimpleCodeGenerator.git"
+        }
+    ],
+    "require": {
+        "goaop/parser-reflection": "^2.0",
+        "tmckenzie/php-simple-code-generator": "dev-master"
+    },
     "autoload": {
         "psr-4": {
-            "Phptestgen\\": "src/",
-            "PHPSimpleCodeGenerator\\": "PHPSimpleCodeGenerator/"
+            "Tmckenzie\\Phptestgen\\": "src/"
         }
     }
 }

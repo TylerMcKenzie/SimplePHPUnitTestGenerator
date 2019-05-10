@@ -5,7 +5,6 @@
  */
 
 require_once(__DIR__ . "/vendor/autoload.php");
-//include "./src/PHPUnitGenerator.php";
 
 $file = "";
 $skip = null;
@@ -26,7 +25,7 @@ for ($i = 0; $i < count($argv); $i++) {
 	}
 }
 
-$code_gen = new Phptestgen\PHPUnitGenerator();
+$code_gen = new Tmckenzie\Phptestgen\PHPUnitGenerator();
 
 $code_gen->setFile($file);
 $code_gen->run();
