@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28c4ce83ac400e312f215ec74798f9bd",
+    "content-hash": "f57b96b13e0f47d3f81823a044792166",
     "packages": [
         {
             "name": "goaop/parser-reflection",
-            "version": "2.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/goaop/parser-reflection.git",
@@ -59,16 +59,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.2.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0"
+                "reference": "8012faea54d5536ea23451a830cc7c1c190015c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/5221f49a608808c1e4d436df32884cbc1b821ac0",
-                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/8012faea54d5536ea23451a830cc7c1c190015c1",
+                "reference": "8012faea54d5536ea23451a830cc7c1c190015c1",
                 "shasum": ""
             },
             "require": {
@@ -106,7 +106,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-02-16T20:54:15+00:00"
+            "time": "2019-05-09T17:15:35+00:00"
         },
         {
             "name": "tmckenzie/php-simple-code-generator",
@@ -146,12 +146,14 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "tmckenzie/php-simple-code-generator": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.0.33"
+    },
     "platform-dev": []
 }
