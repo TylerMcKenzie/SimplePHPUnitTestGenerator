@@ -4,8 +4,6 @@
  * Date: 4/10/2019
  */
 
-require_once(__DIR__ . "/vendor/autoload.php");
-
 $file = "";
 $skip = null;
 
