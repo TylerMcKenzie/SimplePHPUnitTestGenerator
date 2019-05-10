@@ -10,6 +10,7 @@ namespace Phptestgen;
 
 use PHPSimpleCodeGenerator\ClassGenerator;
 //include "PHPSimpleCodeGenerator/ClassGenerator.php";
+use Go\ParserReflection\ReflectionFile;
 
 class PHPUnitGenerator
 {
@@ -33,16 +34,16 @@ class PHPUnitGenerator
 
 	public function run()
 	{
-//		include $this->getFile();
-		$classname = $this->getClassnameFromFile($this->getFile());
+		$reflection_file = new ReflectionFile($this->getFile());
+		$namespaces = $reflection_file->getFileNamespaces();
+		$classes = (array_pop($namespaces))->getClasses();
+		$reflection_class = array_pop($classes);
 
 		// The class we want will always be the last one we loaded
 		$declared_classes = get_declared_classes();
 		$classname = $declared_classes[count($declared_classes)-1];
 
 		$this->class_generator->addUses($classname);
-
-		$reflection_class = new \ReflectionClass($classname);
 
 		$reflection_methods = $reflection_class->getMethods();
 
@@ -78,7 +79,7 @@ class PHPUnitGenerator
 			return;
 		}
 
-		$test_method = new \ClassMethod();
+		$test_method = new ClassMethod();
 		$test_method->setVisibility("public");
 
 		$parameters = $method->getParameters();
@@ -92,7 +93,7 @@ class PHPUnitGenerator
 
 					$doc = "/**\n * @var {$type} \\\\TODO: ADD DESCRIPTION \n */";
 
-					$class_property = new \ClassProperty();
+					$class_property = new ClassProperty();
 					$class_property->setName($name);
 					$class_property->setDoc($doc);
 					$class_property->setType($type);
@@ -103,7 +104,7 @@ class PHPUnitGenerator
 			}
 
 			// Set Up method
-			$setUp_method = new \ClassMethod();
+			$setUp_method = new ClassMethod();
 			$setUp_method->setName("setUp");
 			$setUp_method->setVisibility("public");
 			$setUp_method->setDoc("/**\n * Initializes each property with a valid value.\n */");
@@ -161,7 +162,7 @@ class PHPUnitGenerator
 			$namespace_arr = explode("\\", $method->getDeclaringClass()->getName());
 			$class_name = array_pop($namespace_arr);
 
-			$initialize_method = new \ClassMethod();
+			$initialize_method = new ClassMethod();
 			$initialize_method->setName("initialize");
 			$initialize_method->setVisibility("private");
 			$initialize_method->setDoc("/**\n * Helper method to initialize the class {$class_name}\n *\n * @return {$class_name} class object to test with\n */");
@@ -195,7 +196,7 @@ class PHPUnitGenerator
 
 
 			// Valid test
-			$valid_test_method = new \ClassMethod();
+			$valid_test_method = new ClassMethod();
 
 			$valid_test_method->setName($valid_test_name);
 			$valid_test_method->setDoc("/**\n * TODO: ADD TEST DESCRIPTION\n */");
@@ -206,7 +207,7 @@ class PHPUnitGenerator
 			// Invalid test
 			if (!empty($parameters)) {
 				// Todo create type/argument tests
-				$invalid_test_method = new \ClassMethod();
+				$invalid_test_method = new ClassMethod();
 
 				$invalid_test_method->setName($invalid_test_name);
 				$invalid_test_method->setDoc("/**\n * TODO: ADD TEST DESCRIPTION\n */");
@@ -214,7 +215,7 @@ class PHPUnitGenerator
 
 				$this->class_generator->addMethod($invalid_test_method);
 			} else {
-				$invalid_test_method = new \ClassMethod();
+				$invalid_test_method = new ClassMethod();
 
 				$invalid_test_method->setName($invalid_test_name);
 				$invalid_test_method->setDoc("/**\n * TODO: ADD TEST DESCRIPTION\n */");
@@ -225,17 +226,5 @@ class PHPUnitGenerator
 
 			return null;
 		}
-	}
-
-	private function getClassnameFromFile(string $file)
-	{
-		$file_contents = file_get_contents($file);
-
-		$tokens = token_get_all($file_contents);
-		// TODO: Perform token matching here for any file arbitrarily
-		foreach($tokens as $token_index => $token_value) {
-
-		}
-
 	}
 }

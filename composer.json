@@ -6,7 +6,9 @@
             "email": "tylrmckenz@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "goaop/parser-reflection": "^2.0"
+    },
     "autoload": {
         "psr-4": {
             "Phptestgen\\": "src/",
