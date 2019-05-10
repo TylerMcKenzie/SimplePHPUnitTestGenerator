@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f57b96b13e0f47d3f81823a044792166",
+    "content-hash": "9f1c493942168de66c22fff6d6166b8f",
     "packages": [
         {
             "name": "goaop/parser-reflection",
@@ -113,7 +113,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TylerMcKenzie/PHPSimpleCodeGenerator.git",
+                "url": "ssh://git@github.com/TylerMcKenzie/PHPSimpleCodeGenerator.git",
                 "reference": "f640c35bdc4ed9ac59071c0b6747d59cc5471713"
             },
             "dist": {
