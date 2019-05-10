@@ -6,7 +6,7 @@
  * The purpose of this app is to provide a way to quickly generate tests for our codebase
  */
 
-namespace Phptestgen;
+namespace Tmckenzie\Phptestgen;
 
 use Go\ParserReflection\ReflectionFile;
 use Tmckenzie\PHPSimpleCodeGenerator\ClassGenerator;
