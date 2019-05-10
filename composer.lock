@@ -114,12 +114,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TylerMcKenzie/PHPSimpleCodeGenerator.git",
-                "reference": "faa8a43936a5060c0b6d9dba94969725ce02c2bb"
+                "reference": "265e2d1430ef7da2b1f2a163fec4c7faf35f328a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TylerMcKenzie/PHPSimpleCodeGenerator/zipball/faa8a43936a5060c0b6d9dba94969725ce02c2bb",
-                "reference": "faa8a43936a5060c0b6d9dba94969725ce02c2bb",
+                "url": "https://api.github.com/repos/TylerMcKenzie/PHPSimpleCodeGenerator/zipball/265e2d1430ef7da2b1f2a163fec4c7faf35f328a",
+                "reference": "265e2d1430ef7da2b1f2a163fec4c7faf35f328a",
                 "shasum": ""
             },
             "require": {
@@ -127,7 +127,9 @@
             },
             "type": "library",
             "autoload": {
-                "PHPSimpleCodeGenerator": "src/"
+                "psr-4": {
+                    "Tmckenzie\\PHPSimpleCodeGenerator\\": "src/"
+                }
             },
             "authors": [
                 {
@@ -139,7 +141,7 @@
                 "source": "https://github.com/TylerMcKenzie/PHPSimpleCodeGenerator/tree/master",
                 "issues": "https://github.com/TylerMcKenzie/PHPSimpleCodeGenerator/issues"
             },
-            "time": "2019-05-10T19:54:46+00:00"
+            "time": "2019-05-10T20:43:42+00:00"
         }
     ],
     "packages-dev": [],

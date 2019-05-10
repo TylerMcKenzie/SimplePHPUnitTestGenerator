@@ -8,9 +8,10 @@
 
 namespace Phptestgen;
 
-use PHPSimpleCodeGenerator\ClassGenerator;
-//include "PHPSimpleCodeGenerator/ClassGenerator.php";
 use Go\ParserReflection\ReflectionFile;
+use Tmckenzie\PHPSimpleCodeGenerator\ClassGenerator;
+use Tmckenzie\PHPSimpleCodeGenerator\ClassMethod;
+use Tmckenzie\PHPSimpleCodeGenerator\ClassProperty;
 
 class PHPUnitGenerator
 {
