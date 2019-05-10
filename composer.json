@@ -15,7 +15,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/TylerMcKenzie/PHPSimpleCodeGenerator.git"
+            "url": "ssh://git@github.com/TylerMcKenzie/PHPSimpleCodeGenerator.git"
         }
     ],
     "autoload": {
