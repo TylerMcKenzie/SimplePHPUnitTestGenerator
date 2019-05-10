@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b4775b16cf1fd462d3567a138f28cff",
+    "content-hash": "28c4ce83ac400e312f215ec74798f9bd",
     "packages": [
         {
             "name": "goaop/parser-reflection",
@@ -107,12 +107,47 @@
                 "php"
             ],
             "time": "2019-02-16T20:54:15+00:00"
+        },
+        {
+            "name": "tmckenzie/php-simple-code-generator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TylerMcKenzie/PHPSimpleCodeGenerator.git",
+                "reference": "faa8a43936a5060c0b6d9dba94969725ce02c2bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TylerMcKenzie/PHPSimpleCodeGenerator/zipball/faa8a43936a5060c0b6d9dba94969725ce02c2bb",
+                "reference": "faa8a43936a5060c0b6d9dba94969725ce02c2bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.33"
+            },
+            "type": "library",
+            "autoload": {
+                "PHPSimpleCodeGenerator": "src/"
+            },
+            "authors": [
+                {
+                    "name": "tylermckenzie",
+                    "email": "tylrmckenz@gmail.com"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/TylerMcKenzie/PHPSimpleCodeGenerator/tree/master",
+                "issues": "https://github.com/TylerMcKenzie/PHPSimpleCodeGenerator/issues"
+            },
+            "time": "2019-05-10T19:54:46+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "tmckenzie/php-simple-code-generator": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
