@@ -114,7 +114,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@github.com/TylerMcKenzie/PHPSimpleCodeGenerator.git",
-                "reference": "862713eecec4a41dc5216b027223771743e95a87"
+                "reference": "897f4e7b55f2136ab4fb34646abf43f64e021c9a"
             },
             "require": {
                 "php": ">=7.0.33"
@@ -136,7 +136,7 @@
                     "email": "tylrmckenz@gmail.com"
                 }
             ],
-            "time": "2019-05-13T16:06:38+00:00"
+            "time": "2019-05-13T16:09:42+00:00"
         }
     ],
     "packages-dev": [],
