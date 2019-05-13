@@ -1,5 +1,6 @@
 {
     "name": "tmckenzie/php-unit-test-generator",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "tylermckenzie",
