@@ -6,7 +6,6 @@
             "email": "tylrmckenz@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0.33",
         "goaop/parser-reflection": "^2.0",
