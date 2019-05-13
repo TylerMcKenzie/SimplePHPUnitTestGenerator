@@ -10,7 +10,7 @@
     "require": {
         "php": ">=7.0.33",
         "goaop/parser-reflection": "^2.0",
-        "tmckenzie/php-simple-code-generator": "@dev"
+        "tmckenzie/php-simple-code-generator": "dev-master"
     },
     "repositories": [
         {
