@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6903257a89173bc637f7b65bd966d55",
+    "content-hash": "eacde12e9befe9b541d02978201d9511",
     "packages": [
         {
             "name": "goaop/parser-reflection",
