@@ -67,6 +67,10 @@ class PHPUnitGenerator
 
 	private function generateTestClassMethodForReflectionMethod(\ReflectionMethod $method)
 	{
+		if ($method->getDeclaringClass() !== $this->class_generator->getClassname()) {
+			return;
+		}
+
 		$method_name = $method->getName();
 
 		if ($method->isPrivate() || $method->isProtected()) {
@@ -138,6 +142,9 @@ class PHPUnitGenerator
 							$value = "0;";
 						}
 
+						break;
+					case "":
+						$value = "null";
 						break;
 					default:
 						$value = "\$this->getMockBuilder(\\" .$property->getType() . "::class)->disableOriginalConstructor()->getMock();";
