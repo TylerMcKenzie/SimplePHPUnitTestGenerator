@@ -36,15 +36,9 @@ class PHPUnitGenerator
 	public function run()
 	{
 		$reflection_file = new ReflectionFile($this->getFile());
-		$namespaces = $reflection_file->getFileNamespaces();
-		$classes = (array_pop($namespaces))->getClasses();
-		$reflection_class = array_pop($classes);
+		$reflection_class = $this->getReflectionClassFromReflectionFile($reflection_file);
 
-		// The class we want will always be the last one we loaded
-		$declared_classes = get_declared_classes();
-		$classname = $declared_classes[count($declared_classes)-1];
-
-		$this->class_generator->addUses($classname);
+		$this->class_generator->addUses($reflection_class->getName());
 
 		$reflection_methods = $reflection_class->getMethods();
 
@@ -227,5 +221,21 @@ class PHPUnitGenerator
 
 			return null;
 		}
+	}
+
+	/**
+	 * Returns the first namespaced ReflectionClass from the give ReflectionFile
+	 *
+	 * @param ReflectionFile $reflection_file
+	 *
+	 * @return mixed
+	 */
+	private function getReflectionClassFromReflectionFile(ReflectionFile $reflection_file)
+	{
+		$namespaces = $reflection_file->getFileNamespaces();
+		$classes = (array_pop($namespaces))->getClasses();
+		$reflection_class = array_pop($classes);
+
+		return $reflection_class;
 	}
 }
